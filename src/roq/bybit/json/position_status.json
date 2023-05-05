@@ -1,0 +1,15 @@
+{
+  "name": "PositionStatus",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Normal"
+    },
+    {
+      "name": "Liq"
+    },
+    {
+      "name": "Adl"
+    }
+  ]
+}

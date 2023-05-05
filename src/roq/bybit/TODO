@@ -1,0 +1,14 @@
+rest
+  market_info
+    cursor
+
+order_entry
+  wallet-balance
+    spot vs unified ???
+
+flags
+  limits vs cursor
+
+drop_copy
+  ready should be synchronized with request/response
+    need timeout and how to deal with that

@@ -1,0 +1,62 @@
+{
+  "name": "CancelOrderResult",
+  "type": "comp",
+  "values": [
+    {
+      "name": "orderId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "orderLinkId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "symbol",
+      "type": "std::string_view"
+    },
+    {
+      "name": "createTime",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "cancelTime",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "orderPrice",
+      "type": "double"
+    },
+    {
+      "name": "orderQty",
+      "type": "double"
+    },
+    {
+      "name": "orderType",
+      "type": "OrderType"
+    },
+    {
+      "name": "side",
+      "type": "Side"
+    },
+    {
+      "name": "status",
+      "type": "OrderStatus"
+    },
+    {
+      "name": "timeInForce",
+      "type": "TimeInForce"
+    },
+    {
+      "name": "accountId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "execQty",
+      "type": "double"
+    },
+    {
+      "name": "orderCategory",
+      "type": "int32_t"
+    }
+  ]
+}

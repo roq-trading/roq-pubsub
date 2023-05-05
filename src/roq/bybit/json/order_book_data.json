@@ -1,0 +1,31 @@
+{
+  "name": "OrderBookData",
+  "type": "comp",
+  "values": [
+    {
+      "raw": "s",
+      "name": "symbol",
+      "type": "std::string_view"
+    },
+    {
+      "raw": "b",
+      "name": "bids",
+      "type": "std::span<OrderBookLevel>"
+    },
+    {
+      "raw": "a",
+      "name": "asks",
+      "type": "std::span<OrderBookLevel>"
+    },
+    {
+      "raw": "u",
+      "name": "update_id",
+      "type": "int64_t"
+    },
+    {
+      "raw": "seq",
+      "name": "cross_sequence",
+      "type": "int64_t"
+    }
+  ]
+}

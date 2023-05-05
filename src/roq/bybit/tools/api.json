@@ -1,0 +1,18 @@
+{
+  "name": "API",
+  "type": "enum",
+  "values": [
+    {
+      "name": "spot"
+    },
+    {
+      "name": "linear"
+    },
+    {
+      "name": "inverse"
+    },
+    {
+      "name": "option"
+    }
+  ]
+}

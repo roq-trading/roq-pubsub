@@ -1,0 +1,49 @@
+package:
+  name: roq-pubsub
+  version: {{ GIT_DESCRIBE_TAG }}
+
+source:
+  git_url: ..
+
+build:
+  skip: true  # [not unix]
+  number: {{ ROQ_BUILD_NUMBER if ROQ_BUILD_NUMBER is defined else GIT_DESCRIBE_NUMBER }}
+  script_env:
+    - ROQ_BUILD_NUMBER
+    - ROQ_BUILD_TYPE
+  run_exports:
+    - {{ pin_subpackage('roq-pubsub', max_pin='x.x.x') }}
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - clangdev
+    - cmake
+    - jinja2
+    - make
+    - pkg-config
+  host:
+    - roq-core
+    - abseil-cpp
+    - roq-oss-base64
+    - roq-oss-benchmark
+    - roq-oss-botan
+    - roq-oss-brotli
+    - catch2  # [linux]
+    - roq-oss-catch2  # [osx]
+    - roq-oss-libsodium
+    - roq-oss-magic_enum
+    - roq-oss-re2
+    - roq-oss-tomlplusplus
+    - roq-oss-zlib-ng
+    - roq-server
+    - roq-web
+
+about:
+  home: https://roq-trading.com
+  doc_url: https://roq-trading.com/docs
+  dev_url: https://github.com/roq-trading
+  license: Commercial
+  license_family: PROPRIETARY
+  license_file: LICENSE
+  summary: Roq PubSub Gateway

@@ -1,0 +1,25 @@
+{
+  "name": "AmendOrder",
+  "type": "comp",
+  "values": [
+    {
+      "name": "retCode",
+      "type": "int32_t"
+    },
+    {
+      "name": "retMsg",
+      "type": "std::string_view"
+    },
+    {
+      "name": "result",
+      "type": "AmendOrderResult"
+    },
+    {
+      "name": "retExtInfo"
+    },
+    {
+      "name": "time",
+      "type": "std::chrono::milliseconds"
+    }
+  ]
+}

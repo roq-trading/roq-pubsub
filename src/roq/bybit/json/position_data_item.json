@@ -1,0 +1,118 @@
+{
+  "name": "PositionDataItem",
+  "type": "item",
+  "values": [
+    {
+      "name": "category",
+      "type": "std::string_view"
+    },
+    {
+      "name": "symbol",
+      "type": "std::string_view"
+    },
+    {
+      "name": "side",
+      "type": "Side"
+    },
+    {
+      "name": "size",
+      "type": "double"
+    },
+    {
+      "name": "positionIdx",
+      "type": "int32_t"
+    },
+    {
+      "name": "tradeMode",
+      "type": "int32_t"
+    },
+    {
+      "name": "positionValue",
+      "type": "double"
+    },
+    {
+      "name": "riskId",
+      "type": "int32_t"
+    },
+    {
+      "name": "riskLimitValue",
+      "type": "double"
+    },
+    {
+      "name": "entryPrice",
+      "type": "double"
+    },
+    {
+      "name": "markPrice",
+      "type": "double"
+    },
+    {
+      "name": "leverage",
+      "type": "double"
+    },
+    {
+      "name": "positionBalance",
+      "type": "double"
+    },
+    {
+      "name": "autoAddMargin",
+      "type": "int32_t"
+    },
+    {
+      "name": "positionMM",
+      "type": "double"
+    },
+    {
+      "name": "positionIM",
+      "type": "double"
+    },
+    {
+      "name": "liqPrice",
+      "type": "double"
+    },
+    {
+      "name": "bustPrice",
+      "type": "double"
+    },
+    {
+      "name": "tpSlMode",
+      "type": "TpSlMode"
+    },
+    {
+      "name": "takeProfit",
+      "type": "double"
+    },
+    {
+      "name": "stopLoss",
+      "type": "double"
+    },
+    {
+      "name": "trailingStop",
+      "type": "double"
+    },
+    {
+      "name": "unrealisedPnl",
+      "type": "double"
+    },
+    {
+      "name": "cumRealisedPnl",
+      "type": "double"
+    },
+    {
+      "name": "positionStatus",
+      "type": "PositionStatus"
+    },
+    {
+      "name": "adlRankIndicator",
+      "type": "int32_t"
+    },
+    {
+      "name": "createdTime",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "updatedTime",
+      "type": "std::chrono::milliseconds"
+    }
+  ]
+}

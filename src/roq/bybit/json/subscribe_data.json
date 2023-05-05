@@ -1,0 +1,14 @@
+{
+  "name": "SubscribeData",
+  "type": "comp",
+  "values": [
+    {
+      "name": "failTopics",
+      "type": "std::span<std::string_view>"
+    },
+    {
+      "name": "successTopics",
+      "type": "std::span<std::string_view>"
+    }
+  ]
+}

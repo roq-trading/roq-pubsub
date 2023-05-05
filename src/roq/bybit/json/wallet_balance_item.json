@@ -1,0 +1,66 @@
+{
+  "name": "WalletBalanceItem",
+  "type": "item",
+  "values": [
+    {
+      "name": "coin",
+      "type": "std::string_view"
+    },
+    {
+      "name": "equity",
+      "type": "double"
+    },
+    {
+      "name": "usdValue",
+      "type": "double"
+    },
+    {
+      "name": "walletBalance",
+      "type": "double"
+    },
+    {
+      "name": "free",
+      "type": "double"
+    },
+    {
+      "name": "locked",
+      "type": "double"
+    },
+    {
+      "name": "availableToWithdraw",
+      "type": "double"
+    },
+    {
+      "name": "availableToBorrow",
+      "type": "double"
+    },
+    {
+      "name": "borrowAmount",
+      "type": "double"
+    },
+    {
+      "name": "accruedInterest",
+      "type": "double"
+    },
+    {
+      "name": "totalOrderIM",
+      "type": "double"
+    },
+    {
+      "name": "totalPositionIM",
+      "type": "double"
+    },
+    {
+      "name": "totalPositionMM",
+      "type": "double"
+    },
+    {
+      "name": "unrealisedPnl",
+      "type": "double"
+    },
+    {
+      "name": "cumRealisedPnl",
+      "type": "double"
+    }
+  ]
+}

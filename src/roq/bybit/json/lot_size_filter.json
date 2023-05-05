@@ -1,0 +1,38 @@
+{
+  "name": "LotSizeFilter",
+  "type": "item",
+  "values": [
+    {
+      "name": "basePrecision",
+      "type": "double"
+    },
+    {
+      "name": "quotePrecision",
+      "type": "double"
+    },
+    {
+      "name": "minOrderQty",
+      "type": "double"
+    },
+    {
+      "name": "maxOrderQty",
+      "type": "double"
+    },
+    {
+      "name": "minOrderAmt",
+      "type": "double"
+    },
+    {
+      "name": "maxOrderAmt",
+      "type": "double"
+    },
+    {
+      "name": "qtyStep",
+      "type": "double"
+    },
+    {
+      "name": "postOnlyMaxOrderQty",
+      "type": "double"
+    }
+  ]
+}

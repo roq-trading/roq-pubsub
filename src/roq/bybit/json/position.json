@@ -1,0 +1,22 @@
+{
+  "name": "Position",
+  "type": "comp",
+  "values": [
+    {
+      "name": "id",
+      "type": "std::string_view"
+    },
+    {
+      "name": "topic",
+      "type": "std::string_view"
+    },
+    {
+      "name": "creationTime",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "data",
+      "type": "std::span<PositionDataItem>"
+    }
+  ]
+}

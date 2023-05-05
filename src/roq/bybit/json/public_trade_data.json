@@ -1,0 +1,46 @@
+{
+  "name": "PublicTradeData",
+  "type": "item",
+  "values": [
+    {
+      "raw": "T",
+      "name": "timestamp",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "raw": "s",
+      "name": "symbol",
+      "type": "std::string_view"
+    },
+    {
+      "raw": "S",
+      "name": "side",
+      "type": "Side"
+    },
+    {
+      "raw": "v",
+      "name": "quantity",
+      "type": "double"
+    },
+    {
+      "raw": "p",
+      "name": "price",
+      "type": "double"
+    },
+    {
+      "raw": "L",
+      "name": "direction",
+      "type": "std::string_view"
+    },
+    {
+      "raw": "i",
+      "name": "trade_id",
+      "type": "std::string_view"
+    },
+    {
+      "raw": "BT",
+      "name": "block_trade",
+      "type": "bool"
+    }
+  ]
+}

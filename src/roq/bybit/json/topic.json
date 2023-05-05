@@ -1,0 +1,27 @@
+{
+  "name": "Topic",
+  "type": "enum",
+  "values": [
+    {
+      "name": "orderbook"
+    },
+    {
+      "name": "publicTrade"
+    },
+    {
+      "name": "tickers"
+    },
+    {
+      "name": "wallet"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "position"
+    },
+    {
+      "name": "execution"
+    }
+  ]
+}

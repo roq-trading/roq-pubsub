@@ -1,0 +1,34 @@
+{
+  "name": "Subscribe",
+  "type": "comp",
+  "values": [
+    {
+      "name": "op",
+      "type": "Operation"
+    },
+    {
+      "name": "success",
+      "type": "bool"
+    },
+    {
+      "name": "ret_msg",
+      "type": "std::string_view"
+    },
+    {
+      "name": "conn_id",
+      "type": "std::string_view"
+    },
+    {
+      "name": "req_id",
+      "type": "std::string_view"
+    },
+    {
+      "name": "data",
+      "type": "SubscribeData"
+    },
+    {
+      "name": "type",
+      "type": "EventType"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Message",
+  "type": "comp",
+  "values": [
+    {
+      "name": "id",
+      "type": "std::string_view",
+      "comment": ""
+    },
+    {
+      "name": "topic",
+      "type": "std::string_view",
+      "comment": ""
+    },
+    {
+      "name": "creationTime",
+      "type": "std::chrono::milliseconds",
+      "comment": ""
+    },
+    {
+      "name": "ts",
+      "type": "std::chrono::milliseconds",
+      "comment": "orderbook.1"
+    },
+    {
+      "name": "cs",
+      "type": "int64_t",
+      "comment": "orderbook.1,tickers"
+    },
+    {
+      "name": "type",
+      "type": "EventType",
+      "comment": "orderbook.1"
+    },
+    {
+      "name": "data",
+      "comment": ""
+    },
+    {
+      "name": "req_id",
+      "type": "std::string_view",
+      "comment": "auth"
+    },
+    {
+      "name": "op",
+      "type": "Operation",
+      "comment": "auth"
+    },
+    {
+      "name": "success",
+      "type": "bool",
+      "comment": "auth"
+    },
+    {
+      "name": "ret_msg",
+      "type": "std::string_view",
+      "comment": "auth"
+    },
+    {
+      "name": "conn_id",
+      "type": "std::string_view",
+      "comment": "auth"
+    }
+  ]
+}

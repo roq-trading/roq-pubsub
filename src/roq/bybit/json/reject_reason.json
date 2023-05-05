@@ -1,0 +1,72 @@
+{
+  "name": "RejectReason",
+  "type": "enum",
+  "values": [
+    {
+      "name": "EC_NoError"
+    },
+    {
+      "name": "EC_Others"
+    },
+    {
+      "name": "EC_UnknownMessageType"
+    },
+    {
+      "name": "EC_MissingClOrdID"
+    },
+    {
+      "name": "EC_MissingOrigClOrdID"
+    },
+    {
+      "name": "EC_ClOrdIDOrigClOrdIDAreTheSame"
+    },
+    {
+      "name": "EC_DuplicatedClOrdID"
+    },
+    {
+      "name": "EC_OrigClOrdIDDoesNotExist"
+    },
+    {
+      "name": "EC_TooLateToCancel"
+    },
+    {
+      "name": "EC_UnknownOrderType"
+    },
+    {
+      "name": "EC_UnknownSide"
+    },
+    {
+      "name": "EC_UnknownTimeInForce"
+    },
+    {
+      "name": "EC_WronglyRouted"
+    },
+    {
+      "name": "EC_MarketOrderPriceIsNotZero"
+    },
+    {
+      "name": "EC_LimitOrderInvalidPrice"
+    },
+    {
+      "name": "EC_NoEnoughQtyToFill"
+    },
+    {
+      "name": "EC_NoImmediateQtyToFill"
+    },
+    {
+      "name": "EC_PerCancelRequest"
+    },
+    {
+      "name": "EC_MarketOrderCannotBePostOnly"
+    },
+    {
+      "name": "EC_PostOnlyWillTakeLiquidity"
+    },
+    {
+      "name": "EC_CancelReplaceOrder"
+    },
+    {
+      "name": "EC_InvalidSymbolStatus"
+    }
+  ]
+}

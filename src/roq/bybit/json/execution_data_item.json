@@ -1,0 +1,114 @@
+{
+  "name": "ExecutionDataItem",
+  "type": "item",
+  "values": [
+    {
+      "name": "category",
+      "type": "std::string_view"
+    },
+    {
+      "name": "symbol",
+      "type": "std::string_view"
+    },
+    {
+      "name": "isLeverage",
+      "type": "int32_t"
+    },
+    {
+      "name": "orderId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "orderLinkId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "side",
+      "type": "Side"
+    },
+    {
+      "name": "orderPrice",
+      "type": "double"
+    },
+    {
+      "name": "orderQty",
+      "type": "double"
+    },
+    {
+      "name": "leavesQty",
+      "type": "double"
+    },
+    {
+      "name": "orderType",
+      "type": "OrderType"
+    },
+    {
+      "name": "stopOrderType",
+      "type": "StopOrderType"
+    },
+    {
+      "name": "execFee",
+      "type": "double"
+    },
+    {
+      "name": "execId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "execPrice",
+      "type": "double"
+    },
+    {
+      "name": "execQty",
+      "type": "double"
+    },
+    {
+      "name": "execType",
+      "type": "ExecType"
+    },
+    {
+      "name": "execValue",
+      "type": "double"
+    },
+    {
+      "name": "execTime",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "isMaker",
+      "type": "bool"
+    },
+    {
+      "name": "feeRate",
+      "type": "double"
+    },
+    {
+      "name": "tradeIv",
+      "type": "double"
+    },
+    {
+      "name": "markIv",
+      "type": "double"
+    },
+    {
+      "name": "markPrice",
+      "type": "double"
+    },
+    {
+      "name": "indexPrice",
+      "type": "double"
+    },
+    {
+      "name": "underlyingPrice",
+      "type": "double"
+    },
+    {
+      "name": "blockTradeId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "closedSize",
+      "type": "double"
+    }
+  ]
+}

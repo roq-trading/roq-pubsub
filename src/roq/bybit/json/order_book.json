@@ -1,0 +1,28 @@
+{
+  "name": "OrderBook",
+  "type": "comp",
+  "values": [
+    {
+      "name": "id",
+      "type": "std::string_view",
+      "comment": "...O"
+    },
+    {
+      "name": "topic",
+      "type": "std::string_view"
+    },
+    {
+      "name": "type",
+      "type": "EventType"
+    },
+    {
+      "raw": "ts",
+      "name": "timestamp",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "data",
+      "type": "OrderBookData"
+    }
+  ]
+}

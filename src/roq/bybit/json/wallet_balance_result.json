@@ -1,0 +1,10 @@
+{
+  "name": "WalletBalanceResult",
+  "type": "comp",
+  "values": [
+    {
+      "name": "list",
+      "type": "std::span<WalletBalanceResultItem>"
+    }
+  ]
+}

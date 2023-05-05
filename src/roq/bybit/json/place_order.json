@@ -1,0 +1,25 @@
+{
+  "name": "PlaceOrder",
+  "type": "comp",
+  "values": [
+    {
+      "name": "retCode",
+      "type": "int32_t"
+    },
+    {
+      "name": "retMsg",
+      "type": "std::string_view"
+    },
+    {
+      "name": "result",
+      "type": "PlaceOrderResult"
+    },
+    {
+      "name": "retExtInfo"
+    },
+    {
+      "name": "time",
+      "type": "std::chrono::milliseconds"
+    }
+  ]
+}

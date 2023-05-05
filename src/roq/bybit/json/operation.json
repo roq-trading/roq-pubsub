@@ -1,0 +1,15 @@
+{
+  "name": "Operation",
+  "type": "enum",
+  "values": [
+    {
+      "name": "auth"
+    },
+    {
+      "name": "ping"
+    },
+    {
+      "name": "subscribe"
+    }
+  ]
+}

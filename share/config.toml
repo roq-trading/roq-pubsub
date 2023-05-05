@@ -1,0 +1,32 @@
+symbols = [
+  "^BTCUSD[A-Z]?$",
+  "^ETHUSD[A-Z]?$"
+]
+
+[accounts]
+
+  [accounts.A1]
+  master = true
+  login = "YOUR_BYBIT_API_KEY_GOES_HERE"
+  secret = "YOUR_BYBIT_SECRET_GOES_HERE"
+  symbols = [ ".*" ]
+
+[users]
+
+  [users.test]
+  password = "1234"
+  symbols = ".*"
+
+  [users.trader]
+  password = "secret"
+  accounts = [ "A1" ]
+  symbols = [ ".*BTC.*", ".*ETH.*" ]
+
+[rate_limits]
+
+  [rate_limits.global]
+    type = "ORDER_ACTION"
+    aggregate = true
+    request_limit = 100
+    monitor_period = "10s"
+    ban_period = "5m"

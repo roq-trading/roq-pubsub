@@ -1,0 +1,19 @@
+{
+  "name": "EventType",
+  "type": "enum",
+  "values": [
+    {
+      "name": "error"
+    },
+    {
+      "name": "snapshot"
+    },
+    {
+      "name": "delta"
+    },
+    {
+      "name": "COMMAND_RESP",
+      "comment": "...O"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "PlaceOrderResult",
+  "type": "comp",
+  "values": [
+    {
+      "name": "orderId",
+      "type": "std::string_view"
+    },
+    {
+      "name": "orderLinkId",
+      "type": "std::string_view"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "PriceFilter",
+  "type": "item",
+  "values": [
+    {
+      "name": "minPrice",
+      "type": "double"
+    },
+    {
+      "name": "maxPrice",
+      "type": "double"
+    },
+    {
+      "name": "tickSize",
+      "type": "double"
+    }
+  ]
+}

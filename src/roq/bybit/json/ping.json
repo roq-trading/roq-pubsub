@@ -1,0 +1,26 @@
+{
+  "name": "Ping",
+  "type": "comp",
+  "values": [
+    {
+      "name": "op",
+      "type": "Operation"
+    },
+    {
+      "name": "success",
+      "type": "bool"
+    },
+    {
+      "name": "req_id",
+      "type": "std::string_view"
+    },
+    {
+      "name": "conn_id",
+      "type": "std::string_view"
+    },
+    {
+      "name": "ret_msg",
+      "type": "std::string_view"
+    }
+  ]
+}

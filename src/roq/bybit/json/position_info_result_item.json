@@ -1,0 +1,110 @@
+{
+  "name": "PositionInfoResultItem",
+  "type": "item",
+  "values": [
+    {
+      "name": "positionIdx",
+      "type": "int32_t"
+    },
+    {
+      "name": "riskId",
+      "type": "int32_t"
+    },
+    {
+      "name": "riskLimitValue",
+      "type": "double"
+    },
+    {
+      "name": "symbol",
+      "type": "std::string_view"
+    },
+    {
+      "name": "side",
+      "type": "Side"
+    },
+    {
+      "name": "size",
+      "type": "double"
+    },
+    {
+      "name": "avgPrice",
+      "type": "double"
+    },
+    {
+      "name": "positionValue",
+      "type": "double"
+    },
+    {
+      "name": "tradeMode",
+      "type": "int32_t"
+    },
+    {
+      "name": "autoAddMargin",
+      "type": "int32_t"
+    },
+    {
+      "name": "positionStatus",
+      "type": "PositionStatus"
+    },
+    {
+      "name": "leverage",
+      "type": "double"
+    },
+    {
+      "name": "markPrice",
+      "type": "double"
+    },
+    {
+      "name": "liqPrice",
+      "type": "double"
+    },
+    {
+      "name": "bustPrice",
+      "type": "double"
+    },
+    {
+      "name": "positionIM",
+      "type": "double"
+    },
+    {
+      "name": "positionMM",
+      "type": "double"
+    },
+    {
+      "name": "tpslMode",
+      "type": "TpSlMode"
+    },
+    {
+      "name": "takeProfit",
+      "type": "double"
+    },
+    {
+      "name": "stopLoss",
+      "type": "double"
+    },
+    {
+      "name": "trailingStop",
+      "type": "double"
+    },
+    {
+      "name": "unrealisedPnl",
+      "type": "double"
+    },
+    {
+      "name": "cumRealisedPnl",
+      "type": "double"
+    },
+    {
+      "name": "adlRankIndicator",
+      "type": "int32_t"
+    },
+    {
+      "name": "createdTime",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "updatedTime",
+      "type": "std::chrono::milliseconds"
+    }
+  ]
+}

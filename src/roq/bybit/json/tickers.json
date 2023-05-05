@@ -1,0 +1,33 @@
+{
+  "name": "Tickers",
+  "type": "comp",
+  "values": [
+    {
+      "name": "topic",
+      "type": "std::string_view"
+    },
+    {
+      "name": "type",
+      "type": "EventType"
+    },
+    {
+      "raw": "cs",
+      "name": "cross_sequence",
+      "type": "int64_t"
+    },
+    {
+      "raw": "ts",
+      "name": "timestamp",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "data",
+      "type": "TickersData"
+    },
+    {
+      "name": "id",
+      "type": "std::string_view",
+      "comment": "...O"
+    }
+  ]
+}

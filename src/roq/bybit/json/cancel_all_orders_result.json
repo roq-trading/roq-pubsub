@@ -1,0 +1,16 @@
+{
+  "name": "CancelAllOrdersResult",
+  "type": "comp",
+  "values": [
+    {
+      "name": "success",
+      "type": "int32_t",
+      "comment": "S..."
+    },
+    {
+      "name": "list",
+      "type": "std::span<CancelAllOrdersResultItem>",
+      "comment": ".LIO"
+    }
+  ]
+}

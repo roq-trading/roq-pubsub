@@ -1,0 +1,23 @@
+{
+  "name": "PublicTrade",
+  "type": "comp",
+  "values": [
+    {
+      "name": "topic",
+      "type": "std::string_view"
+    },
+    {
+      "name": "type",
+      "type": "EventType"
+    },
+    {
+      "raw": "ts",
+      "name": "timestamp",
+      "type": "std::chrono::milliseconds"
+    },
+    {
+      "name": "data",
+      "type": "std::span<PublicTradeData>"
+    }
+  ]
+}
