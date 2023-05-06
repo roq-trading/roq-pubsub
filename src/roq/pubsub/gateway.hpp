@@ -5,12 +5,13 @@
 #include "roq/server.hpp"
 
 #include "roq/pubsub/config.hpp"
+#include "roq/pubsub/settings.hpp"
 
 namespace roq {
 namespace pubsub {
 
 struct Gateway final : public server::Handler {
-  Gateway(server::Dispatcher &, Config const &, io::Context &);
+  Gateway(server::Dispatcher &, Settings const &, Config const &, io::Context &);
 
  protected:
   void operator()(Event<Start> const &) override;

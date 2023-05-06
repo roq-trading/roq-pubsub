@@ -11,7 +11,8 @@ namespace pubsub {
 
 // === IMPLEMENTATION ===
 
-Gateway::Gateway(server::Dispatcher &dispatcher, Config const &, io::Context &) : dispatcher_{dispatcher} {
+Gateway::Gateway(server::Dispatcher &dispatcher, Settings const &, Config const &, io::Context &)
+    : dispatcher_{dispatcher} {
 }
 
 void Gateway::operator()(Event<Start> const &) {

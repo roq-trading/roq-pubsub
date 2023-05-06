@@ -2,7 +2,7 @@ set(TARGET_NAME "${PROJECT_NAME}")
 
 add_subdirectory(flags)
 
-set(SOURCES application.cpp config.cpp gateway.cpp main.cpp)
+set(SOURCES application.cpp config.cpp gateway.cpp settings.cpp main.cpp)
 
 roq_gitignore(OUTPUT ".gitignore" SOURCES "${TARGET_NAME}" ${AUTOGEN_HEADERS})
 

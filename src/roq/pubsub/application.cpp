@@ -4,31 +4,23 @@
 
 #include "roq/pubsub/config.hpp"
 #include "roq/pubsub/gateway.hpp"
-
-#include "roq/pubsub/flags/flags.hpp"
+#include "roq/pubsub/settings.hpp"
 
 using namespace std::literals;
 
 namespace roq {
 namespace pubsub {
 
-// === HELPERS ===
+// === CONSTANTS ===
 
 namespace {
-auto create_settings = []() {
-  return server::Settings{
-      .package_name = ROQ_PACKAGE_NAME,
-      .build_number = ROQ_BUILD_NUMBER,
-      .api = {},
-      .type = server::Type::MARKET_DATA,  // XXX ???
-  };
-};
+auto const TYPE = server::Type::PUBLISH_SUBSCRIBE;
 }  // namespace
 
 // === IMPLEMENTATION ===
 
 int Application::main(int, char **) {
-  auto settings = create_settings();
+  auto settings = Settings::create(TYPE);
   Config config;
   auto context = server::create_io_context();
   server::Trading<Gateway>{settings, config, *context}.dispatch();
