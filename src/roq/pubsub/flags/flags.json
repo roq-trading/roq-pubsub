@@ -1,0 +1,13 @@
+{
+  "name": "Flags",
+  "type": "flags",
+  "values": [
+    {
+      "name": "exchange",
+      "type": "std::string",
+      "validator": "roq::core::flags::NonEmpty",
+      "default": "pubsub",
+      "description": "exchange identifier (string)"
+    }
+  ]
+}

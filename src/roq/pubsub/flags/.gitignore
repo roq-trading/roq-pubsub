@@ -1,2 +1,4 @@
 !!! THIS FILE HAS BEEN AUTO-GENERATED !!!
-roq-pubsub-benchmark
+roq-pubsub-flags
+flags.hpp
+flags.cpp
