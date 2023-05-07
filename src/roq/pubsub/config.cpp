@@ -22,7 +22,7 @@ auto const OMS_REQUEST_ID_TYPE = RequestIdType::BASE64;
 // === HELPERS ===
 
 namespace {
-auto create_gateway_settings(auto &settings) -> GatewaySettings {
+auto create_gateway_settings([[maybe_unused]] auto &settings) -> GatewaySettings {
   return {
       .supports = {},
       .mbp_max_depth = {},
