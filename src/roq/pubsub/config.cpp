@@ -19,10 +19,29 @@ namespace {
 auto const OMS_REQUEST_ID_TYPE = RequestIdType::BASE64;
 }
 
+// === HELPERS ===
+
+namespace {
+auto create_gateway_settings(auto &settings) -> GatewaySettings {
+  return {
+      .supports = {},
+      .mbp_max_depth = {},
+      .mbp_tick_size_multiplier = NaN,
+      .mbp_min_trade_vol_multiplier = NaN,
+      .mbp_allow_remove_non_existing = {},
+      .mbp_allow_price_inversion = {},
+      .mbp_checksum = {},
+      .oms_download_has_state = {},
+      .oms_download_has_routing_id = {},
+      .oms_request_id_type = OMS_REQUEST_ID_TYPE,
+  };
+}
+}  // namespace
+
 // === IMPLEMENTATION ===
 
-Config::Config() {
-  server::config::Reader::parse_file(*this);
+Config::Config(Settings const &settings) : gateway_settings_{create_gateway_settings(settings)} {
+  server::config::Reader::parse_file(*this, settings);
   log::info<1>("config={}"sv, *this);
 }
 
@@ -58,19 +77,7 @@ void Config::dispatch(server::config::Handler &handler) const {
     handler(iter.second);
   for (auto &user : users)
     handler(user);
-  auto gateway_settings = GatewaySettings{
-      .supports = {},
-      .mbp_max_depth = {},
-      .mbp_tick_size_multiplier = NaN,
-      .mbp_min_trade_vol_multiplier = NaN,
-      .mbp_allow_remove_non_existing = {},
-      .mbp_allow_price_inversion = {},
-      .mbp_checksum = {},
-      .oms_download_has_state = {},
-      .oms_download_has_routing_id = {},
-      .oms_request_id_type = OMS_REQUEST_ID_TYPE,
-  };
-  handler(gateway_settings);
+  handler(gateway_settings_);
   for (auto &iter : rate_limits)
     handler(iter.second);
 }
