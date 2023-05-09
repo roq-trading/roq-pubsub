@@ -20,7 +20,7 @@ auto const TYPE = server::Type::PUBLISH_SUBSCRIBE;
 // === IMPLEMENTATION ===
 
 int Application::main(int, char **) {
-  auto settings = Settings::create(TYPE);
+  Settings settings{TYPE};
   Config config{settings};
   auto context = server::create_io_context();
   server::Trading<Gateway>{settings, config, *context}.dispatch();
