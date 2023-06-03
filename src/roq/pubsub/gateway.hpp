@@ -35,9 +35,6 @@ struct Gateway final : public server::Handler {
   uint16_t operator()(Event<CancelAllOrders> const &, std::string_view const &request_id) override;
 
   void operator()(metrics::Writer &) override;
-
- private:
-  server::Dispatcher &dispatcher_;
 };
 
 }  // namespace pubsub
