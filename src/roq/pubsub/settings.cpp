@@ -4,6 +4,8 @@
 
 #include "roq/logging.hpp"
 
+#include "roq/server/flags/settings.hpp"
+
 #include "roq/pubsub/flags/flags.hpp"
 
 using namespace std::literals;
@@ -12,7 +14,7 @@ namespace roq {
 namespace pubsub {
 
 Settings::Settings(server::Type type)
-    : server::Settings{server::create_settings(type, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER)},
+    : server::Settings{server::flags::create_settings(type, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER)},
       exchange{flags::Flags::exchange()} {
   log::debug("settings={}"sv, *this);
 }
