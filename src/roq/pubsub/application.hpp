@@ -11,7 +11,7 @@ struct Application final : public roq::Service {
   using roq::Service::Service;
 
  protected:
-  int main(int, char **) override;
+  int main(args::Parser const &) override;
 };
 
 }  // namespace pubsub
