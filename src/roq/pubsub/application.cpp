@@ -19,8 +19,8 @@ auto const TYPE = server::Type::PUBLISH_SUBSCRIBE;
 
 // === IMPLEMENTATION ===
 
-int Application::main(args::Parser const &) {
-  Settings settings{TYPE};
+int Application::main(args::Parser const &args) {
+  Settings settings{args, TYPE};
   Config config{settings};
   auto context = server::create_io_context(settings);
   server::Trading<Gateway>{settings, config, *context}.dispatch();
