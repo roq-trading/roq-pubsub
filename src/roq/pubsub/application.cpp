@@ -11,19 +11,13 @@ using namespace std::literals;
 namespace roq {
 namespace pubsub {
 
-// === CONSTANTS ===
-
-namespace {
-auto const TYPE = server::Type::PUBLISH_SUBSCRIBE;
-}  // namespace
-
 // === IMPLEMENTATION ===
 
 int Application::main(args::Parser const &args) {
-  Settings settings{args, TYPE};
+  Settings settings{args};
   Config config{settings};
   auto context = server::create_io_context(settings);
-  server::Trading<Gateway>{settings, config, *context}.dispatch();
+  server::PubSub<Gateway>{settings, config, *context}.dispatch();
   return EXIT_SUCCESS;
 }
 

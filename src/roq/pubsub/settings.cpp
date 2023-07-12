@@ -11,8 +11,8 @@ using namespace std::literals;
 namespace roq {
 namespace pubsub {
 
-Settings::Settings(args::Parser const &args, server::Type type)
-    : server::flags::Settings{args, type, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER}, exchange{flags::Flags::exchange()} {
+Settings::Settings(args::Parser const &args)
+    : server::flags::Settings{args, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER}, exchange{flags::Flags::exchange()} {
   log::debug("settings={}"sv, *this);
 }
 
