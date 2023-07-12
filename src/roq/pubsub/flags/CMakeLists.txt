@@ -1,4 +1,4 @@
-set(TARGET_NAME "${PROJECT_NAME}-flags")
+set(TARGET_NAME ${PROJECT_NAME}-flags)
 
 include(RoqAutogen)
 
@@ -30,10 +30,10 @@ roq_autogen(
   SOURCES
   ${AUTOGEN_SCHEMAS})
 
-roq_gitignore(OUTPUT ".gitignore" SOURCES "${TARGET_NAME}" ${AUTOGEN_HEADERS} ${AUTOGEN_SOURCES})
+roq_gitignore(OUTPUT .gitignore SOURCES ${TARGET_NAME} ${AUTOGEN_HEADERS} ${AUTOGEN_SOURCES})
 
-add_library("${TARGET_NAME}" OBJECT ${AUTOGEN_SOURCES})
+add_library(${TARGET_NAME} OBJECT ${AUTOGEN_SOURCES})
 
-add_dependencies("${TARGET_NAME}" flags-autogen-headers)
+add_dependencies(${TARGET_NAME} flags-autogen-headers)
 
-target_link_libraries("${TARGET_NAME}" PRIVATE roq-api::roq-api absl::flags)
+target_link_libraries(${TARGET_NAME} PRIVATE roq-api::roq-api absl::flags)
