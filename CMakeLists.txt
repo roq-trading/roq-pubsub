@@ -41,7 +41,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release")
   message("Setting default visibility to hidden")
   set(CMAKE_CXX_VISIBILITY_PRESET hidden)
   set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
-endif(CMAKE_BUILD_TYPE STREQUAL "Release")
+endif()
 
 # filesystem
 
@@ -92,7 +92,7 @@ endif()
 if(BUILD_TESTING)
   find_package(Catch2 REQUIRED)
   add_subdirectory(${CMAKE_SOURCE_DIR}/test)
-endif(BUILD_TESTING)
+endif()
 
 # benchmark
 
@@ -101,7 +101,7 @@ option(BUILD_BENCHMARK "Enable benchmark" ON)
 if(BUILD_BENCHMARK)
   find_package(benchmark REQUIRED)
   add_subdirectory(${CMAKE_SOURCE_DIR}/benchmark)
-endif(BUILD_BENCHMARK)
+endif()
 
 # install
 
