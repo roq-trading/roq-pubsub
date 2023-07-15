@@ -5,7 +5,7 @@
     {
       "name": "exchange",
       "type": "std::string",
-      "validator": "roq::flags::validators::NonEmpty",
+      "required": true,
       "default": "pubsub",
       "description": "exchange identifier (string)"
     }
