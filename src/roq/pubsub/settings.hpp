@@ -7,13 +7,13 @@
 
 #include "roq/server/flags/settings.hpp"
 
+#include "roq/pubsub/flags/flags.hpp"
+
 namespace roq {
 namespace pubsub {
 
-struct Settings final : public server::flags::Settings {
+struct Settings final : public server::flags::Settings, public flags::Flags {
   explicit Settings(args::Parser const &);
-
-  std::string_view exchange;
 };
 
 }  // namespace pubsub
