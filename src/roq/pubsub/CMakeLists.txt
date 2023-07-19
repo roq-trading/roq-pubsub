@@ -21,7 +21,6 @@ target_link_libraries(
           roq-flags::roq-flags
           roq-api::roq-api
           fmt::fmt
-          absl::flags
           absl::flat_hash_map
           absl::flat_hash_set
           aklomp::base64
