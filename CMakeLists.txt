@@ -22,10 +22,7 @@ project(roq-pubsub VERSION ${GIT_REPO_VERSION})
 # dependencies
 
 find_package(absl REQUIRED)
-find_package(base64 REQUIRED)
 find_package(fmt REQUIRED)
-find_package(OpenSSL REQUIRED)
-find_package(re2 REQUIRED)
 find_package(roq-api REQUIRED)
 find_package(roq-core REQUIRED)
 find_package(roq-flags REQUIRED)
@@ -40,8 +37,6 @@ if(UNIX AND NOT APPLE)
 endif()
 
 find_package(PkgConfig REQUIRED)
-
-pkg_check_modules(UUID REQUIRED uuid)
 
 find_program(CLANG_FORMAT clang-format REQUIRED)
 

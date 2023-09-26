@@ -22,8 +22,8 @@ target_link_libraries(
           roq-server::roq-server
           roq-server::roq-server-flags
           roq-web::roq-web
-          roq-io::roq-io
           roq-core::roq-core
+          roq-io::roq-io
           roq-logging::roq-logging
           roq-logging::roq-logging-flags
           roq-flags::roq-flags
@@ -31,8 +31,6 @@ target_link_libraries(
           fmt::fmt
           absl::flat_hash_map
           absl::flat_hash_set
-          aklomp::base64
-          ${UUID_LIBRARIES}
           ${RT_LIBRARIES})
 
 if(ROQ_BUILD_TYPE STREQUAL "Release")
