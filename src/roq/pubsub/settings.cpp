@@ -11,7 +11,7 @@ namespace pubsub {
 
 Settings::Settings(args::Parser const &args)
     : server::flags::Settings{args, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER}, flags::Flags{flags::Flags::create()} {
-  log::debug("settings={}"sv, *this);
+  log::info("settings={}"sv, *this);
 }
 
 }  // namespace pubsub
