@@ -11,6 +11,9 @@ build:
   script_env:
     - ROQ_BUILD_NUMBER
     - ROQ_BUILD_TYPE
+    - CFLAGS=-O3
+    - CPPFLAGS=-O3  # [linux]
+    - CPPFLAGS=-O3 -D_LIBCPP_DISABLE_AVAILABILITY  # [osx]
   run_exports:
     - {{ pin_subpackage('roq-pubsub', max_pin='x.x.x') }}
 
@@ -27,11 +30,11 @@ requirements:
     - brotli
     - catch2  # [linux]
     - fmt
+    - libsodium
     - roq-core
     - roq-flags
     - roq-oss-benchmark
     - roq-oss-catch2  # [osx]
-    - libsodium
     - roq-oss-magic_enum
     - roq-oss-tomlplusplus
     - roq-server
