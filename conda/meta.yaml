@@ -28,13 +28,12 @@ requirements:
   host:
     - abseil-cpp
     - brotli
-    - catch2  # [linux]
+    - catch2
     - fmt
     - libsodium
     - roq-core
     - roq-flags
     - roq-oss-benchmark
-    - roq-oss-catch2  # [osx]
     - roq-oss-magic_enum
     - roq-oss-tomlplusplus
     - roq-server
