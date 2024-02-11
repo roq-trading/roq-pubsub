@@ -4,6 +4,8 @@
 
 #include "roq/logging.hpp"
 
+#include "roq/oms/exceptions.hpp"
+
 using namespace std::literals;
 
 namespace roq {
