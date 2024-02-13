@@ -4,7 +4,7 @@
 
 #include "roq/logging.hpp"
 
-#include "roq/oms/exceptions.hpp"
+#include "roq/server/oms/exceptions.hpp"
 
 using namespace std::literals;
 
@@ -34,28 +34,28 @@ void Gateway::operator()(Event<Disconnected> const &) {
 }
 
 uint16_t Gateway::operator()(
-    Event<CreateOrder> const &, oms::Order const &, [[maybe_unused]] std::string_view const &request_id) {
-  throw oms::NotSupported{"not supported"sv};
+    Event<CreateOrder> const &, server::oms::Order const &, [[maybe_unused]] std::string_view const &request_id) {
+  throw server::oms::NotSupported{"not supported"sv};
 }
 
 uint16_t Gateway::operator()(
     Event<ModifyOrder> const &,
-    oms::Order const &,
+    server::oms::Order const &,
     [[maybe_unused]] std::string_view const &request_id,
     [[maybe_unused]] std::string_view const &previous_request_id) {
-  throw oms::NotSupported{"not supported"sv};
+  throw server::oms::NotSupported{"not supported"sv};
 }
 
 uint16_t Gateway::operator()(
     Event<CancelOrder> const &,
-    oms::Order const &,
+    server::oms::Order const &,
     [[maybe_unused]] std::string_view const &request_id,
     [[maybe_unused]] std::string_view const &previous_request_id) {
-  throw oms::NotSupported{"not supported"sv};
+  throw server::oms::NotSupported{"not supported"sv};
 }
 
 uint16_t Gateway::operator()(Event<CancelAllOrders> const &, [[maybe_unused]] std::string_view const &request_id) {
-  throw oms::NotSupported{"not supported"sv};
+  throw server::oms::NotSupported{"not supported"sv};
 }
 
 void Gateway::operator()(metrics::Writer &) {
