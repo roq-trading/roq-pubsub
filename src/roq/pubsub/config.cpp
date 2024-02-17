@@ -52,21 +52,21 @@ Account const &Config::get_master_account() const {
 }
 
 std::string const &Config::get_api_key(Account const &account) const {
-  auto iter = accounts.find(account);
+  auto iter = accounts.find(static_cast<std::string_view>(account));
   if (iter == std::end(accounts))
     log::fatal(R"(Unknown account="{}")"sv, account);
   return (*iter).second.login;
 }
 
 std::string const &Config::get_passphrase(Account const &account) const {
-  auto iter = accounts.find(account);
+  auto iter = accounts.find(static_cast<std::string_view>(account));
   if (iter == std::end(accounts))
     log::fatal(R"(Unknown account="{}")"sv, account);
   return (*iter).second.password;
 }
 
 std::string const &Config::get_secret(Account const &account) const {
-  auto iter = accounts.find(account);
+  auto iter = accounts.find(static_cast<std::string_view>(account));
   if (iter == std::end(accounts))
     log::fatal(R"(Unknown account="{}")"sv, account);
   return (*iter).second.secret;
