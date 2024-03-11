@@ -63,11 +63,13 @@ target_link_libraries(${TARGET_NAME} PRIVATE roq-api::roq-api absl::flags)
 
 # install
 
-set(TARGET_DIR ${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME})
+if(BUILD_DOCS)
 
 install(
   DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
-  DESTINATION ${TARGET_DIR}/rst
+  DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME}/rst
   FILES_MATCHING
   PATTERN "*.rstinc"
   PATTERN "CMakeFiles" EXCLUDE)
+
+endif()

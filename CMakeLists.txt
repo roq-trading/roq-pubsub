@@ -59,6 +59,8 @@ if(BUILD_BENCHMARK)
   find_package(benchmark REQUIRED)
 endif()
 
+option(BUILD_DOCS "Enable documentation" OFF)
+
 # include
 
 include_directories(

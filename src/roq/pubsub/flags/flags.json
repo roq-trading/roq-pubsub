@@ -7,7 +7,7 @@
       "type": "std::string",
       "required": true,
       "default": "pubsub",
-      "description": "exchange identifier (string)"
+      "description": "Exchange identifier"
     }
   ]
 }
