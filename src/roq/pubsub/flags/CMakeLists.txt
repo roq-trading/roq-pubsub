@@ -6,19 +6,23 @@ set(NAMESPACE "roq/pubsub/flags")
 
 set(AUTOGEN_SCHEMAS flags.json)
 
-roq_autodoc(
-  OUTPUT
-  AUTOGEN_DOC
-  NAMESPACE
-  ${NAMESPACE}
-  OUTPUT_TYPE
-  "doc"
-  FILE_TYPE
-  "rstinc"
-  SOURCES
-  ${AUTOGEN_SCHEMAS})
+if(BUILD_DOCS)
 
-add_custom_target(flags-autogen-doc ALL DEPENDS ${AUTOGEN_DOC})
+  roq_autodoc(
+    OUTPUT
+    AUTOGEN_DOC
+    NAMESPACE
+    ${NAMESPACE}
+    OUTPUT_TYPE
+    "doc"
+    SOURCES
+    ${AUTOGEN_SCHEMAS})
+
+  add_custom_target(flags-autogen-doc ALL DEPENDS ${AUTOGEN_DOC})
+
+  roq_allflags(OUTPUT "flags.rstinc" SOURCES ${AUTOGEN_DOC})
+
+endif()
 
 roq_autogen(
   OUTPUT
@@ -65,11 +69,11 @@ target_link_libraries(${TARGET_NAME} PRIVATE roq-api::roq-api absl::flags)
 
 if(BUILD_DOCS)
 
-install(
-  DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
-  DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME}/rst
-  FILES_MATCHING
-  PATTERN "*.rstinc"
-  PATTERN "CMakeFiles" EXCLUDE)
+  install(
+    DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME}/rst
+    FILES_MATCHING
+    PATTERN "*.rstinc"
+    PATTERN "CMakeFiles" EXCLUDE)
 
 endif()
