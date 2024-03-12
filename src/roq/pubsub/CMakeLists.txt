@@ -43,3 +43,14 @@ target_compile_definitions(
           ROQ_BUILD_NUMBER="${ROQ_BUILD_NUMBER}" ROQ_BUILD_TYPE="${ROQ_BUILD_TYPE}")
 
 install(TARGETS ${TARGET_NAME})
+
+if(BUILD_DOCS)
+
+  install(
+    DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME}
+    FILES_MATCHING
+    PATTERN "*.rst*"
+    PATTERN "CMakeFiles" EXCLUDE)
+
+endif()

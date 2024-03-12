@@ -10,7 +10,7 @@ if(BUILD_DOCS)
 
   roq_autodoc(
     OUTPUT
-    AUTOGEN_DOC
+    AUTOGEN_DOCS
     NAMESPACE
     ${NAMESPACE}
     OUTPUT_TYPE
@@ -18,9 +18,7 @@ if(BUILD_DOCS)
     SOURCES
     ${AUTOGEN_SCHEMAS})
 
-  add_custom_target(flags-autogen-doc ALL DEPENDS ${AUTOGEN_DOC})
-
-  roq_allflags(OUTPUT "flags.rstinc" SOURCES ${AUTOGEN_DOC})
+  add_custom_target(flags-autogen-docs ALL DEPENDS ${AUTOGEN_DOCS})
 
 endif()
 
@@ -55,7 +53,7 @@ roq_gitignore(
   .gitignore
   SOURCES
   ${TARGET_NAME}
-  ${AUTOGEN_DOC}
+  ${AUTOGEN_DOCS}
   ${AUTOGEN_HEADERS}
   ${AUTOGEN_SOURCES})
 
@@ -64,16 +62,3 @@ add_library(${TARGET_NAME} OBJECT ${AUTOGEN_SOURCES})
 add_dependencies(${TARGET_NAME} flags-autogen-headers)
 
 target_link_libraries(${TARGET_NAME} PRIVATE roq-api::roq-api absl::flags)
-
-# install
-
-if(BUILD_DOCS)
-
-  install(
-    DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/
-    DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${PROJECT_NAME}/rst
-    FILES_MATCHING
-    PATTERN "*.rstinc"
-    PATTERN "CMakeFiles" EXCLUDE)
-
-endif()
