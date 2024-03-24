@@ -3,63 +3,53 @@
 roq-pubsub
 ==========
 
-
-Purpose
--------
-
-* Support publish / subscribe of custom data types.
+Support publish / subscribe of custom data types.
 
 
-Description
------------
-
-The "gateway" only supports :code:`CustomMetrics` and :code:`CustomMatrix`.
-
-
-Conda
------
+Installing
+----------
 
 * :ref:`Using Conda <tutorial-conda>`
 
-.. tab:: Install
-  
-  .. code-block:: bash
-  
-    $ mamba install \
-      --channel https://roq-trading.com/conda/stable \
-      roq-pubsub
-  
-.. tab:: Configure
+.. tab:: Stable
 
-  .. code-block:: bash
-  
-    $ cp $CONDA_PREFIX/share/roq-pubsub/config.toml $CONFIG_FILE_PATH
-  
-    # Then modify $CONFIG_FILE_PATH to match your specific configuration
-  
-.. tab:: Run
-  
-  .. code-block:: bash
-  
-    $ roq-pubsub \
-          --name "pubsub" \
-          --config_file "$CONFIG_FILE_PATH" \
-          --service_listen_address "$TCP_LISTEN_PORT_FOR_METRICS" \
-          --flagfile "$FLAG_FILE"
-  
+  .. code-block:: shell
 
-Config
-------
+     $ mamba install \
+           --channel https://roq-trading.com/conda/stable \
+           roq-pubsub
 
+.. tab:: Unstable
+
+  .. code-block:: shell
+
+     $ mamba install \
+           --channel https://roq-trading.com/conda/unstable \
+           roq-pubsub
+
+
+Using
+-----
+
+.. code-block:: shell
+
+   $ roq-pubsub \
+         --name "pubsub" \
+         --config_file $CONFIG_FILE_PATH \
+         --client_listen_address $UNIX_SOCKET_PATH \
+         --flagfile $ENVIRONMENT_FLAGFILE
+
+
+.. _roq-pubsub-flags:
 
 Flags
 -----
 
 * :ref:`Using Flags <abseil-cpp>`
 
-.. code-block:: bash
+.. code-block:: shell
 
-   $ roq-udp-subscriber --help
+   $ roq-pubsub --help
 
 .. tab:: Flags
 
@@ -68,3 +58,5 @@ Flags
 
 Constraints
 -----------
+
+* The "gateway" only supports :code:`CustomMetrics` and :code:`CustomMatrix`.
