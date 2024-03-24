@@ -46,6 +46,7 @@ Flags
 -----
 
 * :ref:`Using Flags <abseil-cpp>`
+* :ref:`Gateway Flags <gateway-flags>`
 
 .. code-block:: shell
 
