@@ -3,4 +3,4 @@
 	url = http://localhost:8080/gogs/roq-trading/roq-cmake.git
 [submodule "roq-autogen"]
 	path = autogen
-	url = http://localhost:8080/gogs/roq-trading/roq-autogen.git
+	url = http://localhost:8080/gogs/roq-trading/roq-autogen-2.git
