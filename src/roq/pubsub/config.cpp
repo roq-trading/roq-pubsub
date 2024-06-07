@@ -41,8 +41,7 @@ auto create_gateway_settings([[maybe_unused]] auto &settings) -> GatewaySettings
 
 // === IMPLEMENTATION ===
 
-Config::Config(Settings const &settings)
-    : exchange_{settings.exchange}, gateway_settings_{create_gateway_settings(settings)} {
+Config::Config(Settings const &settings) : exchange_{settings.exchange}, gateway_settings_{create_gateway_settings(settings)} {
   server::config::Reader::parse_file(*this, settings);
   log::info<1>("config={}"sv, *this);
 }
@@ -102,8 +101,7 @@ void Config::operator()(server::config::RateLimit &&rate_limit) {
   rate_limits.emplace(rate_limit.name, std::move(rate_limit));
 }
 
-void Config::operator()(
-    server::config::RequestTemplate, [[maybe_unused]] std::string_view const &label, toml::table &) {
+void Config::operator()(server::config::RequestTemplate, [[maybe_unused]] std::string_view const &label, toml::table &) {
   log::fatal("Unexpected: request templates not supported"sv);
 }
 

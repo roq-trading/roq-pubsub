@@ -9,8 +9,7 @@ using namespace std::literals;
 namespace roq {
 namespace pubsub {
 
-Settings::Settings(args::Parser const &args)
-    : server::flags::Settings{args, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER}, flags::Flags{flags::Flags::create()} {
+Settings::Settings(args::Parser const &args) : server::flags::Settings{args, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER}, flags::Flags{flags::Flags::create()} {
   log::info("settings={}"sv, *this);
 }
 
