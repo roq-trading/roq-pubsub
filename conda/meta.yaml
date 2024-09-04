@@ -14,8 +14,6 @@ build:
     - CFLAGS=-O3
     - CPPFLAGS=-O3  # [linux]
     - CPPFLAGS=-O3 -D_LIBCPP_DISABLE_AVAILABILITY  # [osx]
-  run_exports:
-    - {{ pin_subpackage('roq-pubsub', max_pin='x.x.x') }}
 
 requirements:
   build:
@@ -30,17 +28,18 @@ requirements:
     - catch2
     - fmt
     - libabseil
-    - libsodium
+    - roq-api
     - roq-core
     - roq-flags
+    - roq-io
+    - roq-logging
     - roq-oss-benchmark
-    - roq-oss-brotli
     - roq-oss-magic_enum
-    - roq-oss-tomlplusplus
     - roq-oss-unordered_dense
     - roq-server
     - roq-utils
     - roq-web
+    - roq-oss-brotli # note! roq-core
 
 about:
   home: https://roq-trading.com
