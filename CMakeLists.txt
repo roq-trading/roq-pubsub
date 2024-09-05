@@ -38,10 +38,6 @@ find_package(roq-web REQUIRED)
 find_package(tomlplusplus REQUIRED)
 find_package(unordered_dense REQUIRED)
 
-if(UNIX AND NOT APPLE)
-  find_package(rt REQUIRED) # XXX
-endif()
-
 find_package(PkgConfig REQUIRED)
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

@@ -21,8 +21,7 @@ target_link_libraries(
           roq-flags::roq-flags
           roq-api::roq-api
           fmt::fmt
-          unordered_dense::unordered_dense
-          ${RT_LIBRARIES})
+          unordered_dense::unordered_dense)
 
 if(ROQ_BUILD_TYPE STREQUAL "Release")
   set_target_properties(${TARGET_NAME} PROPERTIES LINK_FLAGS_RELEASE -s)
