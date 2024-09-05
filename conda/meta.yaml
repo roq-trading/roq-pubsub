@@ -40,7 +40,6 @@ requirements:
     - roq-server
     - roq-utils
     - roq-web
-    - roq-oss-brotli # note! roq-core
 
 about:
   home: https://roq-trading.com
