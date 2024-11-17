@@ -11,15 +11,15 @@ add_executable(${TARGET_NAME} ${SOURCES})
 target_link_libraries(
   ${TARGET_NAME}
   PRIVATE ${PROJECT_NAME}-flags
-          roq-server::roq-server
-          roq-server::roq-server-flags
-          roq-web::roq-web
+          roq-api::roq-api
           roq-core::roq-core
+          roq-flags::roq-flags
           roq-io::roq-io
           roq-logging::roq-logging
           roq-logging::roq-logging-flags
-          roq-flags::roq-flags
-          roq-api::roq-api
+          roq-server::roq-server
+          roq-server::roq-server-flags
+          roq-web::roq-web
           fmt::fmt
           unordered_dense::unordered_dense)
 

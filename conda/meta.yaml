@@ -23,10 +23,14 @@ requirements:
     - fmt
     - libabseil
     - roq-api
+    - roq-cache
+    - roq-codec
     - roq-core
+    - roq-fix
     - roq-flags
     - roq-io
     - roq-logging
+    - roq-market
     - roq-oss-benchmark
     - roq-oss-magic_enum
     - roq-oss-tomlplusplus
