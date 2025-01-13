@@ -30,6 +30,10 @@ struct Gateway final : public server::Handler {
 
   uint16_t operator()(Event<CancelAllOrders> const &, std::string_view const &request_id) override;
 
+  uint16_t operator()(Event<MassQuote> const &) override;
+
+  uint16_t operator()(Event<CancelQuotes> const &) override;
+
   void operator()(metrics::Writer &) override;
 };
 
