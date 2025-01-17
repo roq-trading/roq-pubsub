@@ -19,6 +19,7 @@ struct Gateway final : public server::Handler {
   void operator()(Event<Start> const &) override;
   void operator()(Event<Stop> const &) override;
   void operator()(Event<Timer> const &) override;
+  void operator()(Event<Control> const &) override;
   void operator()(Event<Connected> const &) override;
   void operator()(Event<Disconnected> const &) override;
 
@@ -35,6 +36,9 @@ struct Gateway final : public server::Handler {
   uint16_t operator()(Event<CancelQuotes> const &) override;
 
   void operator()(metrics::Writer &) override;
+
+ private:
+  server::Dispatcher &dispatcher_;
 };
 
 }  // namespace pubsub
