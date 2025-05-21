@@ -81,7 +81,7 @@ uint16_t Gateway::operator()(Event<CancelQuotes> const &) {
   throw server::oms::NotSupported{"not supported"sv};
 }
 
-void Gateway::operator()(metrics::Writer &) {
+void Gateway::operator()(metrics::Writer &) const {
 }
 
 }  // namespace pubsub
