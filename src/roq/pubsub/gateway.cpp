@@ -49,6 +49,9 @@ void Gateway::operator()(Event<Connected> const &) {
 void Gateway::operator()(Event<Disconnected> const &) {
 }
 
+void Gateway::operator()(Event<Subscribe> const &) {
+}
+
 uint16_t Gateway::operator()(Event<CreateOrder> const &, server::oms::Order const &, [[maybe_unused]] std::string_view const &request_id) {
   throw server::oms::NotSupported{"not supported"sv};
 }

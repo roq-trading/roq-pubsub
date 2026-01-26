@@ -23,6 +23,8 @@ struct Gateway final : public server::Handler {
   void operator()(Event<Connected> const &) override;
   void operator()(Event<Disconnected> const &) override;
 
+  void operator()(Event<Subscribe> const &) override;
+
   uint16_t operator()(Event<CreateOrder> const &, server::oms::Order const &, std::string_view const &request_id) override;
   uint16_t operator()(
       Event<ModifyOrder> const &, server::oms::Order const &, std::string_view const &request_id, std::string_view const &previous_request_id) override;
