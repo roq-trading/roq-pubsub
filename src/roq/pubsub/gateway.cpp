@@ -52,13 +52,15 @@ void Gateway::operator()(Event<Disconnected> const &) {
 void Gateway::operator()(Event<Subscribe> const &) {
 }
 
-uint16_t Gateway::operator()(Event<CreateOrder> const &, server::oms::Order const &, [[maybe_unused]] std::string_view const &request_id) {
+uint16_t Gateway::operator()(
+    Event<CreateOrder> const &, server::oms::Order const &, server::oms::RefData const &, [[maybe_unused]] std::string_view const &request_id) {
   throw server::oms::NotSupported{"not supported"sv};
 }
 
 uint16_t Gateway::operator()(
     Event<ModifyOrder> const &,
     server::oms::Order const &,
+    server::oms::RefData const &,
     [[maybe_unused]] std::string_view const &request_id,
     [[maybe_unused]] std::string_view const &previous_request_id) {
   throw server::oms::NotSupported{"not supported"sv};
@@ -67,6 +69,7 @@ uint16_t Gateway::operator()(
 uint16_t Gateway::operator()(
     Event<CancelOrder> const &,
     server::oms::Order const &,
+    server::oms::RefData const &,
     [[maybe_unused]] std::string_view const &request_id,
     [[maybe_unused]] std::string_view const &previous_request_id) {
   throw server::oms::NotSupported{"not supported"sv};
