@@ -36,10 +36,10 @@ requirements:
     - roq-logging
     - roq-market
     - roq-oss-tomlplusplus
-    - roq-oss-unordered_dense
     - roq-server
     - roq-utils
     - roq-web
+    - unordered_dense
   run:
     - benchmark
 
