@@ -2,7 +2,7 @@ set(TARGET_NAME ${PROJECT_NAME})
 
 add_subdirectory(flags)
 
-set(SOURCES application.cpp config.cpp gateway.cpp settings.cpp main.cpp)
+set(SOURCES application.cpp config.cpp gateway.cpp main.cpp)
 
 roq_gitignore(OUTPUT .gitignore SOURCES ${TARGET_NAME} ${AUTOGEN_HEADERS})
 
@@ -18,7 +18,6 @@ target_link_libraries(
           roq-logging::roq-logging
           roq-logging::roq-logging-flags
           roq-server::roq-server
-          roq-server::roq-server-flags
           roq-web::roq-web
           fmt::fmt
           unordered_dense::unordered_dense)
