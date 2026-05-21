@@ -1,26 +1,16 @@
 set(TARGET_NAME ${PROJECT_NAME})
 
 add_subdirectory(flags)
+add_subdirectory(gateway)
 
-set(SOURCES application.cpp config.cpp gateway.cpp main.cpp)
+set(SOURCES application.cpp main.cpp)
 
 roq_gitignore(OUTPUT .gitignore SOURCES ${TARGET_NAME} ${AUTOGEN_HEADERS})
 
 add_executable(${TARGET_NAME} ${SOURCES})
 
-target_link_libraries(
-  ${TARGET_NAME}
-  PRIVATE ${PROJECT_NAME}-flags
-          roq-api::roq-api
-          roq-core::roq-core
-          roq-flags::roq-flags
-          roq-io::roq-io
-          roq-logging::roq-logging
-          roq-logging::roq-logging-flags
-          roq-server::roq-server
-          roq-web::roq-web
-          fmt::fmt
-          unordered_dense::unordered_dense)
+target_link_libraries(${TARGET_NAME} PRIVATE ${PROJECT_NAME}-flags ${PROJECT_NAME}-gateway roq-flags::roq-flags roq-logging::roq-logging
+                                             roq-logging::roq-logging-flags roq-server::roq-server)
 
 if(ROQ_BUILD_TYPE STREQUAL "Release")
   set_target_properties(${TARGET_NAME} PROPERTIES LINK_FLAGS_RELEASE -s)

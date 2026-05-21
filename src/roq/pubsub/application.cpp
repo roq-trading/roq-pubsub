@@ -2,9 +2,10 @@
 
 #include "roq/pubsub/application.hpp"
 
-#include "roq/pubsub/config.hpp"
-#include "roq/pubsub/gateway.hpp"
-#include "roq/pubsub/settings.hpp"
+#include "roq/pubsub/flags/settings.hpp"
+
+#include "roq/pubsub/gateway/config.hpp"
+#include "roq/pubsub/gateway/controller.hpp"
 
 using namespace std::literals;
 
@@ -14,10 +15,10 @@ namespace pubsub {
 // === IMPLEMENTATION ===
 
 int Application::main(args::Parser const &args) {
-  Settings settings{args};
-  Config config{settings};
+  flags::Settings settings{args};
+  gateway::Config config{settings};
   auto context = server::create_io_context(settings);
-  server::PubSub<Gateway>{settings, config, *context}.dispatch();
+  server::PubSub2<gateway::Controller>{settings, config, *context}.dispatch();
   return EXIT_SUCCESS;
 }
 

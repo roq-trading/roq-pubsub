@@ -2,6 +2,8 @@ set(TARGET_NAME ${PROJECT_NAME}-benchmark)
 
 set(SOURCES main.cpp)
 
+include(RoqAutogen)
+
 roq_gitignore(OUTPUT .gitignore SOURCES ${TARGET_NAME})
 
 add_executable(${TARGET_NAME} ${SOURCES})

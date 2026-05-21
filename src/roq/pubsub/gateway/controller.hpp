@@ -2,18 +2,25 @@
 
 #pragma once
 
+#include "roq/compat.hpp"
+
 #include "roq/server.hpp"
 
-#include "roq/pubsub/config.hpp"
-#include "roq/pubsub/settings.hpp"
+#include "roq/pubsub/gateway/config.hpp"
+#include "roq/pubsub/gateway/settings.hpp"
 
 namespace roq {
 namespace pubsub {
+namespace gateway {
 
-struct Gateway final : public server::Handler {
-  Gateway(server::Dispatcher &, Settings const &, Config const &, io::Context &);
+struct Controller final : public server::Handler {
+  ROQ_PUBLIC static std::unique_ptr<server::Handler> create(server::Dispatcher &, Settings const &, Config const &, io::Context &);
 
-  Gateway(Gateway const &) = delete;
+  Controller(server::Dispatcher &, Settings const &, Config const &, io::Context &);
+
+  Controller(Controller const &) = delete;
+
+  virtual ~Controller() = default;
 
  protected:
   void operator()(Event<Start> const &) override;
@@ -51,5 +58,6 @@ struct Gateway final : public server::Handler {
   server::Dispatcher &dispatcher_;
 };
 
+}  // namespace gateway
 }  // namespace pubsub
 }  // namespace roq
