@@ -10,7 +10,8 @@ namespace roq {
 namespace pubsub {
 namespace flags {
 
-Settings::Settings(args::Parser const &args) : server::flags::Settings{args, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER}, flags::Flags{flags::Flags::create()} {
+Settings::Settings(args::Parser const &args)
+    : server::flags::Settings{args, ROQ_PACKAGE_NAME, ROQ_BUILD_NUMBER, ROQ_GIT_DESCRIBE_HASH, {}}, flags::Flags{flags::Flags::create()} {
   log::info("settings={}"sv, *this);
 }
 
