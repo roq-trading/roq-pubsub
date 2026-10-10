@@ -21,15 +21,24 @@ std::unique_ptr<server::Handler> Controller::create(server::Dispatcher &dispatch
 Controller::Controller(server::Dispatcher &dispatcher, Settings const &, Config const &, io::Context &) : dispatcher_{dispatcher} {
 }
 
-void Controller::operator()(Event<Start> const &) {
+void Controller::operator()(Trace<Start> const &) {
   log::info("Starting..."sv);
 }
 
-void Controller::operator()(Event<Stop> const &) {
+void Controller::operator()(Trace<Stop> const &) {
   log::info("Stopping..."sv);
 }
 
-void Controller::operator()(Event<Timer> const &) {
+void Controller::operator()(Trace<Timer> const &) {
+}
+
+void Controller::operator()(Event<Connected> const &) {
+}
+
+void Controller::operator()(Event<Disconnected> const &) {
+}
+
+void Controller::operator()(Event<Subscribe> const &) {
 }
 
 void Controller::operator()(Event<Control> const &event) {
@@ -46,15 +55,6 @@ void Controller::operator()(Event<Control> const &event) {
       dispatcher_(State::DISABLED);
       break;
   }
-}
-
-void Controller::operator()(Event<Connected> const &) {
-}
-
-void Controller::operator()(Event<Disconnected> const &) {
-}
-
-void Controller::operator()(Event<Subscribe> const &) {
 }
 
 uint16_t Controller::operator()(

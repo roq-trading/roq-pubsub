@@ -21,14 +21,15 @@ struct Controller final : public server::Handler {
   Controller(Controller const &) = delete;
 
  protected:
-  void operator()(Event<Start> const &) override;
-  void operator()(Event<Stop> const &) override;
-  void operator()(Event<Timer> const &) override;
-  void operator()(Event<Control> const &) override;
+  void operator()(Trace<Start> const &) override;
+  void operator()(Trace<Stop> const &) override;
+  void operator()(Trace<Timer> const &) override;
+
   void operator()(Event<Connected> const &) override;
   void operator()(Event<Disconnected> const &) override;
 
   void operator()(Event<Subscribe> const &) override;
+  void operator()(Event<Control> const &) override;
 
   uint16_t operator()(Event<CreateOrder> const &, server::oms::Order const &, server::oms::RefData const &, std::string_view const &request_id) override;
   uint16_t operator()(
