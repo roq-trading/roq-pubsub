@@ -33,7 +33,7 @@ auto create_gateway_settings([[maybe_unused]] auto &settings) -> GatewaySettings
       .mbp_tick_size_multiplier = NaN,
       .mbp_min_trade_vol_multiplier = NaN,
       .mbp_allow_remove_non_existing = {},
-      .mbp_allow_price_inversion = {},
+      .mbp_allow_price_inversion = settings.app.disable_strict_mbp_validation,
       .mbp_checksum = {},
       .oms_download_has_state = {},
       .oms_download_has_routing_id = {},
