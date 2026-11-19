@@ -25,8 +25,8 @@ struct Controller final : public server::Handler {
   void operator()(Trace<Stop> const &) override;
   void operator()(Trace<Timer> const &) override;
 
-  void operator()(Event<Connected> const &) override;
-  void operator()(Event<Disconnected> const &) override;
+  void operator()(Trace<Connected> const &, uint8_t user_id) override;
+  void operator()(Trace<Disconnected> const &, uint8_t user_id) override;
 
   void operator()(Trace<Subscribe> const &) override;
   void operator()(Trace<Control> const &) override;
